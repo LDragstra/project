@@ -1,0 +1,144 @@
+// Body
+$body-bg: #f8fafc;
+
+// Typography
+$font-family-sans-serif: 'Open Sans',
+sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+//custom
+
+
+// Colors
+$primary: #007fc8;
+$secondary: #fa6206;
+$blue: #3490dc;
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #f66d9b;
+$red: #e3342f;
+$orange: #f6993f;
+$yellow: #ffed4a;
+$green: #38c172;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+
+$enable-rounded: false;
+
+.card {
+    border: none !important;
+}
+
+.login,
+.image {
+    min-height: 100vh;
+}
+
+.ss-card {
+    color: #777;
+    background-color: #fff;
+    border-bottom: 4px solid $secondary;
+}
+
+.ss-card-left {
+    color: #777;
+    background-color: #fff;
+    border-left: 4px solid $primary;
+}
+
+.login-bg-image {
+    background-image: linear-gradient(to bottom, rgba(6, 164, 255, 0.24), rgba(209, 129, 76, 0.452)),
+        url('https://www.firestop.nl/WP/wp-content/uploads/2016/06/FireStop-bouwkundige-brandvertraging_content-01.jpg');
+    background-size: cover;
+    background-position: center;
+    border-left: 3px solid $primary !important;
+
+}
+
+::selection {
+    background: $secondary;
+    color: white;
+}
+
+.overlay {
+    position: absolute;
+    background-color: #3490dc;
+    opacity: 0.5;
+
+
+}
+
+:root {
+    --input-padding-x: 1.5rem;
+    --input-padding-y: 0.75rem;
+}
+
+input,
+textarea,
+select {
+    border: 1px solid #eeeeee !important;
+}
+
+input:focus {
+    @extend .shadow;
+    border-bottom: 4px solid $primary !important;
+}
+
+textarea:focus,
+select:focus {
+    @extend .shadow;
+    border-top: 4px solid $primary !important;
+}
+
+.btn:hover {
+    @extend .shadow;
+    transition: 1s;
+}
+
+
+
+body {
+    overflow-x: hidden;
+}
+
+#sidebar-wrapper {
+    min-height: 100vh - 8vh;
+    margin-left: -15rem;
+    -webkit-transition: margin .25s ease-out;
+    -moz-transition: margin .25s ease-out;
+    -o-transition: margin .25s ease-out;
+    transition: margin .25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+    width: 15rem;
+}
+
+#page-content-wrapper {
+    min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+}
+
+@media (min-width: 768px) {
+    #sidebar-wrapper {
+        margin-left: 0;
+    }
+
+    #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: -15rem;
+    }
+}
